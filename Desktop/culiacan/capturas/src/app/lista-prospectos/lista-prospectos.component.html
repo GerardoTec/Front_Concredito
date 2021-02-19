@@ -1,0 +1,29 @@
+<body>
+    <h1>Lista de Prospectos </h1>
+    <div class="contenido">
+        <div class="sombra">
+            <table class="contenido__tabla">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Estatus</th>
+                        <th>Ver Solicitud</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prospecto of prospetos; let i = index;">
+                        <td>{{i + 1}} </td>
+                        <td>{{prospecto.nombre}} </td>
+                        <td>{{prospecto.primerApellido}} </td>
+                        <td>{{prospecto.segundoApellido}}</td>
+                        <td>Pendiente</td>
+                        <td title="Ir Administracion" class="pointer" [routerLink]="['/administracion']" >Ver mas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,114 @@
+
+<body>
+    <h1>Bienvenido</h1>
+
+    <h3>Capturar Prospectos</h3>
+
+    <section>
+        <form [formGroup]="formCaptura"
+              (ngSubmit)="crearProspecto()"
+              class="formulario" 
+              >
+           
+                <legend>LLena todos los campos </legend>
+                <div class="contenedor-campos">
+
+                    
+                        <div class="campo">
+                            <label class="campo label">Nombre</label>
+                            <input required type="text" placeholder="Nombre" title="debes introducir tu nombre" formControlName="nombre" >
+                            <div class="validacion" *ngIf="formCaptura.controls['nombre'].invalid && (formCaptura.controls['nombre'].dirty && formCaptura.controls['nombre'].touched)">
+                                <p *ngIf="formCaptura.get('nombre').hasError('required')">El nombre es Obligatorio</p>
+                            </div>
+                        </div>
+                
+
+                    
+                        <div class="campo">
+                            <label>Apellido Paterno</label>
+                            <input required type="text" placeholder="Apellido Paterno" formControlName="primerApellido">
+                            <div class="validacion" *ngIf="formCaptura.controls['primerApellido'].invalid && (formCaptura.controls['primerApellido'].dirty && formCaptura.controls['primerApellido'].touched)">
+                                <p *ngIf="formCaptura.get('primerApellido').hasError('required')">El Apellido es Obligatorio</p>
+                            </div>
+                        </div>
+                    
+
+                    
+                        <div class="campo">
+                            <label>Apellido Materno</label>
+                            <input required type="text" placeholder="Apellido Materno" formControlName="segundoApellido">
+                        </div>
+                    
+                    
+                        <div class="campo">
+                           <label>Calle</label>
+                           <input required type="text" placeholder="calle" formControlName="calle">
+                           <div class="validacion" *ngIf="formCaptura.controls['calle'].invalid && (formCaptura.controls['calle'].dirty && formCaptura.controls['calle'].touched)">
+                            <p *ngIf="formCaptura.get('calle').hasError('required')">La Calle es Obligatoria</p>
+                           </div>
+                       </div>
+                    
+
+                    
+                        <div class="campo">
+                            <label>Numero</label>
+                            <input required type="number" placeholder="Numero" formControlName="numero">
+                            <div class="validacion" *ngIf="formCaptura.controls['numero'].invalid && (formCaptura.controls['numero'].dirty && formCaptura.controls['numero'].touched)">
+                             <p *ngIf="formCaptura.get('numero').hasError('required')">El Numero es Obligatorio</p>
+                            </div>
+                        </div>
+                    
+                  
+                        <div class="campo">
+                            <label>Colonia</label>
+                            <input required type="text" placeholder="Colonia" formControlName="colonia">
+                            <div class="validacion" *ngIf="formCaptura.controls['colonia'].invalid && (formCaptura.controls['colonia'].dirty && formCaptura.controls['colonia'].touched)">
+                                <p *ngIf="formCaptura.get('colonia').hasError('required')">La Colonia es Obligatoria</p>
+                               </div>
+                        </div>
+                 
+
+                    
+                        <div class="campo">
+                            <label>Codigo Postal</label>
+                            <input required type="number" placeholder="Codigo Postal" formControlName="codigoPostal">
+                            <div class="validacion" *ngIf="formCaptura.controls['codigoPostal'].invalid && (formCaptura.controls['codigoPostal'].dirty && formCaptura.controls['codigoPostal'].touched)">
+                                <p *ngIf="formCaptura.get('codigoPostal').hasError('required')">El Codigo Postal es Obligatorio</p>
+                            </div>
+                        </div>
+
+                    
+
+                        <div class="campo">
+                             <label>Telefono</label>
+                             <input required type="tel" placeholder="Telefono" formControlName="telefono">
+                             <div class="validacion" *ngIf="formCaptura.controls['telefono'].invalid && (formCaptura.controls['telefono'].dirty && formCaptura.controls['telefono'].touched)">
+                                 <p *ngIf="formCaptura.get('telefono').hasError('required')">El Telefono es Obligatorio</p>
+                                </div>
+                        </div>
+
+                    
+                        <div class="campo">
+                            <label>RFC</label>
+                            <input required type="text" placeholder="RFC" formControlName="rfc">
+                            <div class="validacion" *ngIf="formCaptura.controls['rfc'].invalid && (formCaptura.controls['rfc'].dirty && formCaptura.controls['rfc'].touched)">
+                                <p *ngIf="formCaptura.get('rfc').hasError('required')">El RFC es Obligatorio</p>
+                               </div>
+                        </div>
+                    
+     
+    
+                    <div class="campo">
+                        <input type="file" placeholder="Nombre">
+                    </div>
+    
+                    <div class="envia">
+                        <input class="boton" type="submit"  value="Enviar" >
+                    </div>
+                    <button class="boton">Salir</button>
+                </div>
+
+
+        </form>
+    </section>
+</body>
