@@ -6,11 +6,12 @@
 
     <section>
         <form [formGroup]="formCaptura"
-              (ngSubmit)="crearProspecto()"
+              (ngSubmit)="crearProspecto1()"
               class="formulario" 
+              enctype="multipart/form-data"
               >
            
-                <legend>LLena todos los campos </legend>
+                <legend>Registrar datos </legend>
                 <div class="contenedor-campos">
 
                     
@@ -99,16 +100,14 @@
      
     
                     <div class="campo">
-                        <input type="file" placeholder="Nombre">
+                        <input type="file" name="archivo" multiple (change)="selectFiles($event)" >
                     </div>
     
                     <div class="envia">
                         <input class="boton" type="submit"  value="Enviar" >
                     </div>
-                    <button class="boton">Salir</button>
+                    <button type="reset" (click)="salir()" class="boton">Salir</button>
                 </div>
-
-
-        </form>
+            </form>
     </section>
 </body>

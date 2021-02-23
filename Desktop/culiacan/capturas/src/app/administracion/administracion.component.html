@@ -1,1 +1,81 @@
-<p>administracion works!</p>
+<body>
+<div class="contenedor sombra">
+    <div class="header">
+        <h1>Prospecto seleccionado</h1>
+    </div>
+    <div class="nombre">
+        <div class="informacion">
+            <p>Nombre</p>
+            <small>{{persona.nombre}}</small>
+        </div>
+
+        <div class="informacion">
+            <p>Apellido paterno</p>
+            <small>{{persona.primerApellido}}</small>
+        </div>
+        <div class="informacion">
+            <p>Apellido materno</p>
+            <small>{{persona.segundoApellido}}</small>
+        </div>
+    </div>
+    
+    <div class="nombre">
+        <div class="informacion">
+            <p>Calle</p>
+            <small>{{persona.calle}}</small>
+        </div>
+
+        <div class="informacion">
+            <p>Numero</p>
+            <small>{{persona.numero}}</small>
+        </div>
+        <div class="informacion">
+            <p>Colonia</p>
+            <small>{{persona.colonia}}</small>
+        </div>
+        <div class="informacion">
+            <p>Codigo Postal</p>
+            <small>{{persona.codigoPostal}}</small>
+        </div>
+    </div>
+    <div class="nombre">
+        <div class="informacion">
+            <p>Telefono</p>
+            <small>{{persona.telefono}}</small>
+        </div>
+        <div class="informacion">
+            <p>Rfc</p>
+            <small>{{persona.rfc}}</small>
+        </div>
+        <div class="informacion">
+            <p>Documentos</p>
+            <tr *ngFor="let archivo of archivos">
+                <td (click)="doc(archivo)" class="pointer">{{archivo}} </td>
+            </tr>
+            
+        </div>
+    </div>
+    
+    <div class="nombre">
+        <div >
+            <p>Rechazado por:</p>
+            <small>{{persona.motivo}}</small>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="motivo">Motivo Del Rechazo</p>
+        <form class="area" 
+              [formGroup]="formAdmin"
+              (ngSubmit)="rechazar()">
+            <textarea formControlName="motivo"  cols="30" rows="10"></textarea>
+            <button class="rechazar boton">Rechazar</button>
+
+        </form>
+        <div class="respuesta">
+            <button class="boton" (click)="aprobar()">Aprobar</button>
+        </div>
+    </div>
+</div>
+</body>

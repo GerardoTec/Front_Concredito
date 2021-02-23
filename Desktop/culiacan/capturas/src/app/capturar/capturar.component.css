@@ -13,6 +13,20 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+h1{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: #060002;
+}
+h3{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: #060002;
+}
 p{
     margin: 0;
     font-size: 15px;

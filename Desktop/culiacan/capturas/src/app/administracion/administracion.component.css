@@ -1,0 +1,120 @@
+h1{
+    color: #060002;
+    text-transform: capitalize;
+}
+p{
+    margin: 0;
+    color: black;
+    font-size: 15px;
+    font-weight: 900;
+}
+small{
+    color: #032958;
+    font-size: 15px;
+    font-weight: 500;
+}
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+.header{
+    margin-top: 15px;
+    padding: 15px 20px;
+    display: block;
+    align-items: center;
+}
+@media(min-width: 768px){
+    .header{
+        margin-top: 15px;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.nombre{
+    display: block;
+    align-items: center;
+   
+}
+@media(min-width: 768px){
+    .nombre{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        border: solid;
+        border-color: cadetblue;
+        border-radius: 10px;
+        
+    }
+}
+
+.informacion{
+    text-align: center;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    
+}
+.area{
+    width: 70%;
+    height: 120px;
+    margin: 0 auto;
+    display: grid;
+  
+}
+.respuesta{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 7px;
+    
+}
+.sombra {
+    padding: 2rem;
+    margin-bottom: 3rem;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+    box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+    background-color: #89D5ED;
+}
+.pointer{
+    cursor: pointer;
+}
+.pointer:hover{
+    background-color: tomato;
+}
+tr{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    
+}
+.rechazar{
+    margin: 15px auto 0;
+}
+.boton{
+    background-color: #0097A7;
+    color: #ffffff;
+    margin-top: .5rem;
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border: none;
+}
+.motivo{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: #F40623;
+}
